@@ -1,0 +1,245 @@
+QUANTUMNIQUE PLACEMENT ENGINE
+DAY 6 – FULL TRAINING PLAN (ADVANCED LEVEL)
+===========================================
+
+BLOCK 1 – APTITUDE (Permutation & Combination)
+
+Question 1
+In how many ways can 3 students be selected from 7 students?
+Solution:
+Select 3 from 7
+7𝐶3=35
+
+Question 2
+How many 2-digit numbers can be formed using digits 1, 2, 3, 4 without repetition?
+Solution:
+First=4choices
+Second=3choices
+=4×3=12
+
+
+Question 3
+In how many ways can a captain and vice-captain be chosen from 6 players?
+Solution:
+6P2=6×5=30
+
+Question 4
+How many different arrangements can be made using the letters of the word MATH?
+Solution:
+4!=24
+
+Question 5
+A committee of 4 members is to be formed from 8 people. In how many ways can it be formed?
+Solution:
+8C4=70
+
+===========================================
+BLOCK 2 – VERBAL ABILITY (Advanced)
+
+Reading Passage
+
+Databases are at the heart of modern applications. Efficient storage,
+retrieval, and management of data are essential for building scalable
+software products. Companies rely on well-designed databases to ensure
+data consistency and performance.
+
+Questions
+
+1. Why are databases important in modern applications?
+   Databases are important because they help store, retrieve, 
+and manage data efficiently.
+     
+2. What does data consistency mean?
+    Data consistency means the data is correct, accurate, and the 
+same everywhere in the system.
+
+3. Why do companies need well-designed databases?
+     Companies need well-designed databases to improve performance
+ and keep data accurate and reliable.
+
+Grammar Correction
+
+1. She does not understand SQL joins.
+2. He was explaining the database schema.
+3. They have written the program successfully.
+
+===========================================
+BLOCK 3 – COMMUNICATION PRACTICE
+
+Speak for 3 minutes on:
+
+Explain one challenge you faced while learning coding
+
+Include:
+- What was the challenge?
+- Why was it difficult?
+- How did you overcome it?
+- What did you learn from it?
+My challenge was understanding errors. When I write code, many times it shows errors. At that time, I did not understand what the error means. It was difficult because I am a beginner. The error messages looked confusing. Even if the mistake is small, my program will not run. That made me feel upset sometimes. Then I started improving slowly. I practiced every day. I read the error message carefully. I searched in Google and watched simple videos. I also asked my friends for help. After some time, I started understanding my mistakes. From this, I learned one thing. Mistakes are normal in coding. We should not be afraid of errors. We should try again and again. Now I feel better and more confident.
+
+===========================================
+BLOCK 4 – PROBLEM SOLVING (Intermediate)
+
+Find the first non-repeating element in the array
+
+Input:
+[4,5,1,2,0,4,1,2]
+
+Output:
+5
+
+Follow-up:
+Solve efficiently using hashing.
+Solution:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();   
+        int[]arr=new int[n];
+        for(int i=0;i<n;i++) {
+            arr[i]=sc.nextInt();
+        }
+        HashMap<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<n;i++) {
+            int num=arr[i];
+            if(map.containsKey(num)) {
+                map.put(num,map.get(num)+1);
+            } else {
+                map.put(num,1);
+            }
+        }
+        for(int i=0;i<n;i++) {
+            if(map.get(arr[i])==1) {
+                System.out.println(arr[i]);
+                return;
+            }
+        }
+        System.out.println("No");
+    }
+}
+
+===========================================
+BLOCK 5 – DATA STRUCTURES & ALGORITHMS (Important Pattern)
+
+Topic: Two Pointers + Sorting
+
+Problem – Two Sum II (Sorted Array)
+
+Given a sorted array, return the indices of two numbers such that they add up to target.
+
+Example:
+
+nums = [2,3,4,7,11,15]
+target = 9
+
+Output:
+[1,3]
+
+Python Solution
+
+def twoSumSorted(nums, target):
+    left, right = 0, len(nums)-1
+
+    while left < right:
+        current = nums[left] + nums[right]
+
+        if current == target:
+            return [left, right]
+        elif current < target:
+            left += 1
+        else:
+            right -= 1
+
+    return [-1, -1]
+
+Time Complexity: O(n)
+
+Practice Problem
+
+Remove duplicates from sorted array
+Solution:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt(); 
+        int[]arr=new int[n];
+        for(int i=0;i<n;i++) {
+            arr[i]=sc.nextInt();
+        }
+        if(n==0) {
+            System.out.println("0");
+            return;
+        }
+        int j=0; 
+        for(int i=1;i<n;i++) {
+            if(arr[i]!=arr[j]) {
+                j++;
+                arr[j]=arr[i];
+            }
+        }
+        for(int i=0;i<=j;i++) {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+
+===========================================
+BLOCK 6 – CORE CS CONCEPTS
+
+DBMS CONCEPT – ACID PROPERTIES
+
+ACID stands for:
+- Atomicity
+- Consistency
+- Isolation
+- Durability
+
+These properties ensure reliable database transactions.
+
+===========================================
+OPERATING SYSTEMS CONCEPT – CONTEXT SWITCHING
+
+Context switching is the process of saving the state of one process/thread
+and loading the state of another so the CPU can switch execution.
+
+===========================================
+NETWORKING CONCEPT – ROUTER VS SWITCH
+
+Router:
+- Connects different networks
+- Uses IP address
+
+Switch:
+- Connects devices within the same network
+- Uses MAC address
+
+===========================================
+CORE COMPUTER SCIENCE CONCEPT – QUEUE
+
+Queue follows FIFO (First In First Out)
+
+Operations:
+- Enqueue
+- Dequeue
+- Front/Peek
+
+Real-world example:
+- Printer queue
+- Ticket counter line
+
+===========================================
+INTERVIEW QUESTION OF THE DAY
+
+What are ACID properties in DBMS?
+
+Answer:
+ACID properties ensure reliable transactions:
+Atomicity means all or nothing.
+Consistency keeps data valid.
+Isolation separates concurrent transactions.
+Durability ensures committed data is permanent.
+
+===========================================
+END OF DAY 6 – QUANTUMNIQUE PLACEMENT ENGINE
